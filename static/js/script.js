@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const imagenOriginal = imagenBanner.src;
 
     // Cambia a 'comida-mexicana2.jpg' al pasar el cursor por la imagen del banner
-    const imagenSecundaria = 'TAC0_PALACE/static/images/comida-mexicana2.jpg'; // Ajusté la ruta a /images/ para coincidir con tu HTML
+    const imagenSecundaria = 'static/images/comida-mexicana2.jpg'; // Ajusté la ruta a /images/ para coincidir con tu HTML
 
     imagenBanner.addEventListener('mouseenter', () => {
         imagenBanner.src = imagenSecundaria;
