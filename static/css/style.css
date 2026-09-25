@@ -1,31 +1,34 @@
-/* Reset general */
+/* Reset básico */
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 body {
     background-color: #ffffff;
 }
 
-/* Encabezado / Navegación */
+/* =========================================
+   ENCABEZADO Y NAVEGACIÓN
+   ========================================= */
 header {
     width: 100%;
-    background-color: rgba(248, 242, 242, 0.411);
-    border-bottom: 1px solid #eaeaea;
+    background-color: #ffffff;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
 }
 
 .nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap; /* Permite que el menú se adapte en pantallas pequeñas */
-    gap: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .Barra-nav {
@@ -35,18 +38,17 @@ header {
 }
 
 .Barra-nav img {
-    height: 28px;
-    width: auto;
+    height: 35px;
+    max-width: 100%;
 }
 
 .Barra-nav h1 {
-    font-size: 22px;
+    font-size: 26px;
     font-weight: bold;
-    color: #000;
 }
 
 .Nombre-Tienda {
-    color: #FF9900;
+    color: #ff9900;
 }
 
 .busqueda-nav {
@@ -54,46 +56,38 @@ header {
     align-items: center;
     gap: 8px;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .busqueda-nav input {
     padding: 6px 8px;
     border: 1px solid #ccc;
-    border-radius: 2px;
     font-size: 13px;
-    outline: none;
+    width: 170px;
 }
 
 .barra-boton {
-    background-color: #FF9900;
-    border: none;
+    background-color: #ff9900;
     color: white;
-    padding: 7px 12px;
+    border: none;
+    padding: 6px 12px;
     font-size: 13px;
     cursor: pointer;
-    border-radius: 2px;
 }
 
 .carrito {
     display: flex;
     align-items: center;
-    gap: 6px;
-    margin-left: 10px;
-    cursor: pointer;
+    gap: 4px;
+    margin-left: 8px;
 }
 
 .carrito img {
-    height: 18px;
-    width: auto;
+    height: 20px;
 }
 
-.carrito span {
-    font-weight: bold;
-    font-size: 13px;
-}
-
-/* Layout Principal */
+/* =========================================
+   LAYOUT PRINCIPAL
+   ========================================= */
 .main {
     max-width: 1100px;
     margin: 15px auto;
@@ -101,211 +95,126 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 15px 0;
+    align-items: stretch;
+    gap: 15px;
 }
 
-/* Sección Superior (Categorías) */
+/* Categorías (Franja Beige Superior) */
 .seccion-superior {
     width: 100%;
+    background-color: #fee8c6;
+    padding: 20px 10px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #FEE8C6;
-    padding: 12px 10px;
-    border-radius: 2px;
-    flex-wrap: wrap; /* Permite que los platillos bajen de línea en móviles */
+    flex-wrap: wrap;
     gap: 10px;
+    margin-bottom: 10px;
 }
 
 .contenido-main {
     text-align: center;
-    padding: 5px;
 }
 
 .contenido-main img {
+    width: 130px;
     height: 110px;
-    width: 110px;
-    object-fit: cover;
-    margin-bottom: 5px;
-    border-radius: 4px;
+    max-width: 100%;
+    margin-bottom: 8px;
 }
 
 .contenido-main p {
-    font-size: 12px;
-    color: #000;
+    font-size: 13px;
 }
 
-/* Sección Izquierda (Banner Principal) */
+/* =========================================
+   BANNER GRIS (CAJA IZQUIERDA)
+   ========================================= */
 .seccion-izquierda {
-    width: 72%;
-    background-color: #C5C5C5;
-    border-radius: 2px;
-    padding: 25px;
+    width: 71%;
+    background-color: #cccccc;
+    padding: 20px;
     display: flex;
-    align-items: center;
 }
 
 .descripcion-izquierdo {
-    display: flex;
+    display: flex; /* La imagen se queda al lado del texto */
+    width: 100%;
     justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    gap: 20px;
+    align-items: flex-start; /* Se quita la alineación vertical rígida */
+    gap: 15px;
 }
 
-.descripcion-izquierdo div {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
+/* Texto a la izquierda */
 .texto {
+    width: 35%;
     text-align: center;
-    width: 100%;
-    max-width: 240px;
-    margin: 0 auto;
+    margin-top: 30px; /* Posicionamiento natural arriba */
 }
 
 h3.texto {
-    font-size: 26px;
-    font-weight: normal;
-    color: #000;
-    line-height: 1.25;
-    margin-bottom: 15px;
-}
-
-h3.texto span {
+    font-size: 22px;
     font-weight: bold;
-    color: #000;
+    margin-bottom: 20px;
 }
 
 p.texto {
-    font-size: 18px;
-    color: #000;
-    line-height: 1.3;
+    font-size: 16px;
 }
 
-p.texto a {
-    color: #2b2b2b;
-    text-decoration: underline;
+.texto a {
+    color: blue;
 }
 
-p.texto span {
-    color: #e65100;
-    font-weight: bold;
-}
-
-/* IMAGEN AGRANDADA AQUÍ */
+/* Imagen más grande ocupando el 60% del ancho */
 .descripcion-izquierdo img {
-    width: 65%; /* Antes estaba en 58%, ahora ocupa más espacio */
-    height: 350px; /* Antes estaba en 280px, ahora es más alta */
-    object-fit: cover;
-    border-radius: 4px;
+    width: 60%;
+    height: 350px;
 }
 
-/* Sección Derecha (Recomendados) */
+/* =========================================
+   RECOMENDADOS (CAJA DERECHA)
+   ========================================= */
 .seccion-derecha {
     width: 26%;
-    display: flex;
-    flex-direction: column;
 }
 
 .seccion-derecha h3 {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
-    color: #000;
-    margin-bottom: 10px;
-    text-align: left;
+    margin-bottom: 8px;
 }
 
 .contenido-derecho {
-    border: 1px solid rgb(212, 212, 212);
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    padding: 6px;
     margin-bottom: 12px;
-    padding: 8px;
-    background-color: #fff;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .contenido-derecho img {
     width: 100%;
-    height: 125px;
-    object-fit: cover;
-    margin-bottom: 8px;
-    border-radius: 2px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 6px;
 }
 
 .contenido-derecho p {
-    display: flex;
-    flex-direction: column;
-    font-size: 12px;
-    color: #000;
-    text-align: left;
-}
-
-.contenido-derecho p a {
-    color: #4b0082;
     font-size: 11px;
-    margin-top: 2px;
-    text-decoration: underline;
 }
 
-.contenido-derecho div {
-    display: flex;
-    align-items: center;
+.contenido-derecho a {
+    color: blue;
 }
 
 .derecho-boton {
-    background-color: #FF9900;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
+    background-color: #ff9900;
     color: white;
     border: none;
-    font-size: 16px;
-    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 12px;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-}
-
-/* =========================================
-   MEDIA QUERIES (ADAPTACIÓN A CELULARES)
-   ========================================= */
-@media (max-width: 768px) {
-    /* Centrar navegación en móviles */
-    .nav {
-        flex-direction: column;
-        justify-content: center;
-    }
-    
-    /* Hacer que las secciones ocupen el 100% del ancho */
-    .seccion-izquierda, 
-    .seccion-derecha {
-        width: 100%; 
-    }
-
-    /* Acomodar banner gris de forma vertical */
-    .descripcion-izquierdo {
-        flex-direction: column-reverse; /* Pone el texto abajo y la imagen arriba */
-        padding: 10px 0;
-    }
-
-    /* La imagen grande ocupa todo el ancho en móviles */
-    .descripcion-izquierdo img {
-        width: 100%;
-        height: auto; 
-        max-height: 300px; /* Evita que sea exageradamente alta en celular */
-    }
-
-    /* Acomodar los platillos de la parte superior (2 o 3 por fila) */
-    .contenido-main {
-        width: 30%; 
-    }
+    margin-top: 5px;
 }
